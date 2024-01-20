@@ -8,7 +8,7 @@ import 'react-native-gesture-handler';
 import { useSelector, useDispatch } from 'react-redux';
 import { getAnswer, setCompleted, setData } from '../redux/action';
 
-const DocsGPT = () => {
+const AskflowGPT = () => {
 
     const [textInput, setTextInput] = useState('');
     const [document, setDocument] = useState('');
@@ -19,7 +19,7 @@ const DocsGPT = () => {
     // const answer = useSelector(state => state.answer);
     const dispatch = useDispatch();
     const {completed, data} = useSelector(state => state.reducer); 
-    const apiUrl = "http://17b5c8f7a5e48b02c9eaeed9888c134e.serveo.net/api/";
+    const apiUrl = "http://5b283eba058fc4812cc39daef113e972.serveo.net/api/";
 
     const fetchData = () => {
         // Set loading to true
@@ -55,7 +55,7 @@ const DocsGPT = () => {
 
     return (
         <View style={styles.container}>
-            {/* <Text style={styles.title}>DocsGPT</Text> */}
+            {/* <Text style={styles.title}>AskflowGPT</Text> */}
             <Text style={styles.subtitle}>Chosen Document: {document}</Text>
             <Button title="Pick Document" onPress={handleChooseDocument} style={styles.subtitle}/>
             <Modal
@@ -90,11 +90,12 @@ const DocsGPT = () => {
                                 {item.type === 'user' ? 'User' : 'Bot'}
                             </Text>
                             <Text style={
-                            {backgroundColor: item.type === 'user' ? '#faaa' : '#afa',
+                            {backgroundColor: item.type === 'user' ? '#7d54d1' : '#f6f6f6',
                                 flex: 1,
                                 width: '100%',
                                 padding: 10,
                                 margin: 10,
+                                color: item.type === 'user' ? 'white' : 'black'
                             }
                                 }>
                                     {item.text}
@@ -129,12 +130,12 @@ const DocsGPT = () => {
 
     };
 
-export default DocsGPT;
+export default AskflowGPT;
 
 const styles = StyleSheet.create({
     container: {
             flex: 1,
-            backgroundColor: '#fffcc4',
+            backgroundColor: '#ffff',
             alignItems: 'center',            
         },
         title: {

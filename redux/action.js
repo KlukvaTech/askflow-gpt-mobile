@@ -3,7 +3,7 @@ export const GET_ANSWER = 'GET_ANSWER';
 export const SET_DATA = 'SET_DATA';
 export const SET_COMPLETED = 'SET_COMPLETED';
 
-const API_URL = "http://17b5c8f7a5e48b02c9eaeed9888c134e.serveo.net/api/";
+const API_URL = "http://5b283eba058fc4812cc39daef113e972.serveo.net/api/";
 // Access API key from environment variable
 const apiKey = "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";
 const history = [];

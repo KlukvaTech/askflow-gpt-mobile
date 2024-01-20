@@ -12,7 +12,7 @@ const Upload = () => {
     const [loading, setLoading] = useState(false);
     const [uploadStatus, setUploadStatus] = useState('');
 
-    const apiUrl = "http://17b5c8f7a5e48b02c9eaeed9888c134e.serveo.net/api/";
+    const apiUrl = "http://5b283eba058fc4812cc39daef113e972.serveo.net/api/";
   
     const selectFile = async () => {
       try {
@@ -22,7 +22,8 @@ const Upload = () => {
 
         console.log(res);
   
-        if (res.type === 'success') {
+        if (res.calceled !== 'false') {
+          console.log("aboba")
           setSelectedFile(res);
         }
       } catch (err) {
@@ -115,7 +116,7 @@ const Upload = () => {
 const styles = StyleSheet.create({
     container: {
             flex: 1,
-            backgroundColor: '#fffcc4',
+            backgroundColor: '#ffff',
             alignItems: 'center',
             justifyContent: 'center',
         },
